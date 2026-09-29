@@ -51,6 +51,9 @@ while True:
     try:
         # START-STOP
         start_signal, stop_signal, robot_freeze_signal = read_start_stop(client)
+        # NOTE: STOP is only checked at the start of each loop iteration,
+        # so it takes effect after the current pick-and-place cycle finishes,
+        # not immediately mid-motion.
         if not stop_signal:
             if system_active:
                 print("===SYSTEM STOP===")
@@ -71,6 +74,8 @@ while True:
             continue
         robot_freeze_mode = False
 
+        # IMPORTANT NOTE: Press the START button first to activate the robot.
+        # The system stays idle and the robot will not move until START is pressed.
         if start_signal and not prev_start and not system_active:
             print("===SYSTEM START===")
             system_active = True
