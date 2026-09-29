@@ -2,6 +2,9 @@
 
 A Python-based robotic sorting system for Factory I/O, using Modbus TCP for real-time communication with the simulated PLC. Uses a Binary Search Tree (BST) to map binary sensor codes to material types and pick/drop positions, with computer-vision-based material detection and start/stop/home control logic.
 
+## Demo
+![Factory I/O Scene](<Factory IO 9_29_2026 6_59_12 PM.png>)
+
 ## Features
 - Modbus TCP communication with Factory I/O
 - Binary sensor code to material type mapping (BST-based)
