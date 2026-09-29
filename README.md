@@ -24,9 +24,9 @@ A Python-based robotic sorting system for Factory I/O, using Modbus TCP for real
 - start_stop.py — start/stop/home signal handling
 
 ## Requirements
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 ## How to Run
 1. Open Factory I/O and load the sorting scene.
